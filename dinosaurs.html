@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>What kind of dinosaur are you?</title>
+        <link rel="shortcut icon" href="frog.ico">
+		<style>
+			body
+			{
+				background-color: honeydew;
+				text-align: center;
+				padding: 25;
+				border-style: solid;
+				border-color: limegreen;
+			}
+			button
+			{
+				background: linear-gradient(to bottom right, honeydew 0%, limegreen 100%);
+				height: 500;
+				width: 500;
+				border-style: solid;
+				border-color: gray;
+				font-size: 75;
+				color: gray;
+			}
+			button:hover
+			{
+				opacity: 75%;
+				transition: .5s;
+			}
+			img
+			{
+				border-style: solid;
+				border-color: gray;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<button onclick="Choose()" id="button">Click to find out what kind of dinosaur you are!</button>
+        <img id="dino1" src="dino1.jpg" height="500" width="500" style="display:none;">
+        <img id="dino2" src="dino2.jpg" height="500" width="500" style="display:none;">
+        <img id="dino3" src="dino3.jpg" height="500" width="500" style="display:none;">
+        <img id="dino4" src="dino4.jpg" height="500" width="500" style="display:none;">
+        <img id="dino5" src="dino5.jpg" height="500" width="500" style="display:none;">
+        <img id="dino6" src="dino6.jpg" height="500" width="500" style="display:none;">
+		
+		<script>
+			var random;
+			function Choose()
+			{
+				document.getElementById("button").style.display = "none";
+				random = Math.floor(Math.random() * 6);
+				if (random == 0)
+					document.getElementById("dino1").style.display = "";
+				else if (random == 1)
+					document.getElementById("dino2").style.display = "";
+				else if (random == 2)
+					document.getElementById("dino3").style.display = "";
+				else if (random == 3)
+					document.getElementById("dino4").style.display = "";
+				else if (random == 4)
+					document.getElementById("dino5").style.display = "";
+				else if (random == 5)
+					document.getElementById("dino6").style.display = "";
+				else
+					alert("error");
+			}
+		</script>
+	</body>
+</html>
